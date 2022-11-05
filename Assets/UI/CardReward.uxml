@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" style="flex-direction: row; flex-grow: 1;">
+        <ui:VisualElement name="CardView" style="flex-basis: 100%; flex-direction: row; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; flex-wrap: nowrap; background-color: rgba(0, 0, 0, 0.73); justify-content: center; align-items: center;" />
+    </ui:VisualElement>
+</ui:UXML>

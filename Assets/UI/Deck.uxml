@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="Screen" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.6);">
+        <ui:VisualElement name="Info" style="height: 40px; background-color: rgb(38, 38, 38);" />
+        <ui:VisualElement name="CardBord" style="flex-direction: row;">
+            <ui:VisualElement name="Pioch" style="width: 256px; background-color: rgba(0, 0, 0, 0.53);" />
+            <ui:VisualElement name="Deck" style="flex-grow: 1; flex-direction: row; background-color: rgba(0, 0, 0, 0); justify-content: flex-start; width: 2000px; height: 2000px; flex-shrink: 1;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
