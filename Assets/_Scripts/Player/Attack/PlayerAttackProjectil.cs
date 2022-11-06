@@ -35,7 +35,6 @@ public class PlayerAttackProjectil : MonoBehaviour {
     void PlayerShot()
     {
         if(playerInputManager.isAiming()){
-            Debug.Log("PlayerShot");
             GameObject projectilObject = (GameObject)Instantiate(projectilPrefab, firePoint.position, firePoint.rotation);
             ProjectilAuto projectil = projectilObject.GetComponent<ProjectilAuto>();
         }

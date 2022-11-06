@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float gravityValue = -9.81f;
     [SerializeField] private float controllerDeadzone = 0.1f;
     [SerializeField] private float gamepadRotate = 100f;
-
     [SerializeField] private bool isGamepad;
 
 
@@ -31,9 +30,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        
         controller = GetComponent<CharacterController>();
         animator = GetComponentsInChildren<Animator>()[0];
+    }
+
+    private void Start(){
         playerInputManager = PlayerInputManager.Instance;
+        Debug.Log(playerInputManager);
     }
 
     void isMooving(){
@@ -67,8 +71,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        HandleMovement();
         isMooving();
+        HandleMovement();
         pickUpLoots();
     }
 

@@ -11,6 +11,8 @@
 /[Mm]emoryCaptures/
 /[Aa]ssets/[Pp]articles/
 /[Aa]ssets/[Ss]tore/
+/[Aa]ssets/[Pp]lugins/
+
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta

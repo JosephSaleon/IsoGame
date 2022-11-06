@@ -17,8 +17,8 @@ TagManager:
   - Loot
   - Player
   - Enemy
-  - 
-  - 
+  - EnemyProjectil
+  - PlayerProjectil
   - 
   - 
   - 
