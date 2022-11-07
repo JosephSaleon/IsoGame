@@ -9,17 +9,13 @@ public class Enemy : MonoBehaviour {
 
     //Value
     [Header("Value")]
-    public float rangDetectionDistance = 10f;
-    public float movementSpeed = 1.5f;
-    public float startSpeed = 10;
     public float startHealth = 100f;
     private float deathScaleSpeed = 0.3f;
 
     //Update value
     [Header("Update value")]
     private float health;
-    public float speed;
-    private bool isDead = false;
+    public bool isDead = false;
     private bool isFoundPlayer = false;
 
     // Ref
@@ -46,10 +42,7 @@ public class Enemy : MonoBehaviour {
 
     public void Start()
     {
-        speed = startSpeed;
         health = startHealth;
-        target = GameObject.FindWithTag("Player").transform;
-
         // Get the sprite componants
         spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
         spriteTransform = transform.Find("Sprite");
@@ -63,12 +56,6 @@ public class Enemy : MonoBehaviour {
 
     void Update()
     {
-        
-        float distanceToPlayer = Vector3.Distance(transform.position, target.position);
-        if(isFoundPlayer || distanceToPlayer < rangDetectionDistance){
-            moveToTarget();
-            isFoundPlayer = true;
-        }
         
         if(isDead){
             
@@ -87,14 +74,6 @@ public class Enemy : MonoBehaviour {
        
     }
 
-    public void moveToTarget() {
-        if(!isDead){
-            Vector3 dir = target.position - transform.position;
-            transform.Translate(dir.normalized * movementSpeed * Time.deltaTime, Space.World);
-        };
-        
-    }
-
     public void TakeDammage(float amount)
     {
         health -= amount;
@@ -109,11 +88,7 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    public void Slow(float amount)
-    {
-        speed = startSpeed * (1f - amount);
-    }
-
+    
     private void Die()
     {
         spriteAnimator.enabled = false;
@@ -154,12 +129,6 @@ public class Enemy : MonoBehaviour {
             clone = Instantiate(loots, transform.position, transform.rotation);
             clone.velocity = new Vector3(rnd.Next(-1,1), rnd.Next(3,7), rnd.Next(-1,1));
         }
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, rangDetectionDistance);
     }
 
 }

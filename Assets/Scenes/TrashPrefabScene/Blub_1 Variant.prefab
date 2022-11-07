@@ -191,7 +191,9 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1.1336607
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 31823442, guid: 42d5d7fb64dd8264c920d53d62a89ef2, type: 3}
+    - {fileID: 31823443, guid: 42d5d7fb64dd8264c920d53d62a89ef2, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4890058920587162026, guid: 42d5d7fb64dd8264c920d53d62a89ef2, type: 3}
       insertIndex: -1
